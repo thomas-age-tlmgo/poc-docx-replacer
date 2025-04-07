@@ -1,0 +1,10 @@
+services:
+  replacer:
+    build:
+      context: .
+    container_name: docx-placeholder-replacer
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
